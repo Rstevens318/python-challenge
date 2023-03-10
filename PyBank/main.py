@@ -57,13 +57,27 @@ with open(budget_data, encoding= 'utf-8') as budget_file:
     lowestMonth = monthOfChange[greatestMonthDecrease]
 
 #Print to terminal to double check work
-print('Total Months:', rowcount)
-print('Total:', '$',total)
-print('%.2f' % averageValue)
-print(greatestIncrease)
-print(greatestDecrease)
-print(highestMonth)
-print(lowestMonth)
+print(f'Financial Analysis')
+print('--------------------------')
+print(f'Total Months: {rowcount}')
+print(f'Total: {total}')
+print(f'Average Change: {"%.2f" % averageValue}')
+print(f'Greatest Increase In Profits {greatestIncrease}')
+print(f'Greatest Decrease In Profits {greatestDecrease}')
+
+
+#figure out how to create .txt file and stick in analysis directory
+
 
 
 #Export data to .txt file
+analysis_data = os.path.join("..","PyBank", "Analysis", "analysis_data.txt")
+with open(analysis_data, 'w') as analysis_out:
+    analysis_out.write(f'Financial Analysis\n')
+    analysis_out.write('--------------------------\n')
+    analysis_out.write(f'Total Months: {rowcount}\n')
+    analysis_out.write(f'Total: {total}\n')
+    analysis_out.write(f'Average Change: {"%.2f" % averageValue}\n')
+    analysis_out.write(f'Greatest Increase In Profits {greatestIncrease}\n')
+    analysis_out.write(f'Greatest Decrease In Profits {greatestDecrease}\n')
+
