@@ -62,8 +62,8 @@ print('--------------------------')
 print(f'Total Months: {rowcount}')
 print(f'Total: {total}')
 print(f'Average Change: {"%.2f" % averageValue}')
-print(f'Greatest Increase In Profits {greatestIncrease}')
-print(f'Greatest Decrease In Profits {greatestDecrease}')
+print(f'Greatest Increase In Profits {highestMonth} {greatestIncrease}')
+print(f'Greatest Decrease In Profits {lowestMonth} {greatestDecrease}')
 
 
 #figure out how to create .txt file and stick in analysis directory
@@ -76,8 +76,8 @@ with open(analysis_data, 'w') as analysis_out:
     analysis_out.write(f'Financial Analysis\n')
     analysis_out.write('--------------------------\n')
     analysis_out.write(f'Total Months: {rowcount}\n')
-    analysis_out.write(f'Total: {total}\n')
-    analysis_out.write(f'Average Change: {"%.2f" % averageValue}\n')
-    analysis_out.write(f'Greatest Increase In Profits {greatestIncrease}\n')
-    analysis_out.write(f'Greatest Decrease In Profits {greatestDecrease}\n')
+    analysis_out.write(f'Total: ${total}\n')
+    analysis_out.write(f'Average Change: ${"%.2f" % averageValue}\n')
+    analysis_out.write(f'Greatest Increase In Profits {highestMonth} (${greatestIncrease})\n')
+    analysis_out.write(f'Greatest Decrease In Profits {lowestMonth} (${greatestDecrease})\n')
 
