@@ -66,10 +66,6 @@ print(f'Greatest Increase In Profits {highestMonth} {greatestIncrease}')
 print(f'Greatest Decrease In Profits {lowestMonth} {greatestDecrease}')
 
 
-#figure out how to create .txt file and stick in analysis directory
-
-
-
 #Export data to .txt file
 analysis_data = os.path.join("..","PyBank", "Analysis", "analysis_data.txt")
 with open(analysis_data, 'w') as analysis_out:
